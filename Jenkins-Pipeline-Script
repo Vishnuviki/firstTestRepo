@@ -1,12 +1,13 @@
 pipeline {
-  agent any
-  
-  stages {
-    stage("Hello") {
-      echo "Hello World"
-    }
-    stage("Git Checkout") {
-      git 'https://github.com/Vishnuviki/firstTestRepo/'
-    }
-  }  
+   agent any
+
+   stages {
+      stage('Hello') {
+         steps {
+            echo 'Hello World'
+            
+            git 'https://github.com/Vishnuviki/firstTestRepo/'
+         }
+      }
+   }
 }
